@@ -1,0 +1,95 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title class='text-center'>Login</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content
+    padding
+    class="animated fadeIn login auth-page"
+>
+    <div class="login-content">
+
+        <!-- Logo -->
+        <div
+            padding-horizontal
+            text-center
+            class="animated fadeInDown"
+        >
+            <div class="logo"></div>
+            <h2
+                ion-text
+                class="text-primary"
+            >
+                <strong>Ecootols</strong>
+                Acne soluções
+            </h2>
+        </div>
+
+        <!-- Login form -->
+        <form class="list-form">
+            <ion-item>
+                <ion-label floating>
+                    <ion-icon
+                        name="username"
+                        item-start
+                        class="text-primary"
+                    ></ion-icon>
+                    Email
+                </ion-label>
+                <ion-input
+                    [(ngModel)]="username"
+                    name="username"
+                    required
+                    placeholder="digite seu email"
+                ></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>
+                    <ion-icon
+                        name="lock"
+                        item-start
+                        class="text-primary"
+                    ></ion-icon>
+                    Senha
+                </ion-label>
+                <ion-input
+                    [(ngModel)]="password"
+                    type="password"
+                    name="password"
+                    required
+                ></ion-input>
+            </ion-item>
+        </form>
+
+        <div class="ion-padding">
+            <ion-button
+                expand="block"
+                type="submit"
+                class="ion-no-margin"
+                (click)="login()"
+                routerLink="/home"
+            >
+                <ion-icon name="log-in"></ion-icon>
+                Entrar
+            </ion-button>
+        </div>
+
+        <!-- Other links -->
+        <div class="ion-padding">
+
+            <ion-button
+                ion-button
+                expand="block"
+                color="medium"
+                type="submit"
+                class="ion-no-margin"
+                (click)="forgotPass()"
+            >
+                Esqueceu a senha?
+            </ion-button>
+
+        </div>
+    </div>
+</ion-content>

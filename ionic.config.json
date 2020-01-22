@@ -1,5 +1,7 @@
 {
   "name": "ecootols",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
